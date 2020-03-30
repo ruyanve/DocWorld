@@ -1,0 +1,21 @@
+<Patch>
+
+  <!--Move lights to the "Lighting" tab-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[O21] Clutter Structures</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="ClutterFence"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Fences</designationCategory>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>
